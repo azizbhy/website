@@ -1,15 +1,13 @@
 import Link from "next/link";
-
+import { _isAuthenticated } from "../_helpers/authentication";
 import styles from "../styles/layout.module.css";
 import { Logo } from "./Logo";
-import { session, signOut, useSession } from "next-auth/react";
 
 export const Header = () => {
-  const { data: session } = useSession();
-  console.log("session", session);
+ 
   return (
     <header>
-      {!session ? (
+      {!_isAuthenticated  ? (
         <nav className={styles.topNav}>
           <Link href="/signin">Sign in</Link>
           <Link href="/signup">Sign up</Link>
@@ -33,8 +31,8 @@ export const Header = () => {
             <Link href="/">Contact us</Link>
           </li>
         </ul>
-        {session ? (
-          <button className={styles.logout} onClick={() => signOut()}>
+        {_isAuthenticated ? (
+          <button className={styles.logout}>
             <strong>J</strong>
           </button>
         ) : (

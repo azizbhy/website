@@ -1,18 +1,10 @@
-import Head from "next/head";
-import Router from "next/router";
-
-import Image from "next/image";
-import { Component } from "react";
 import { Signup } from "../components/Signup";
-import {SignupForm } from "../components/SignupForm";
 import styles from "../styles/Home.module.css";
 import { LoginForm } from "../components/LoginForm";
 import { signIn } from "next-auth/react";
-import signup from "./register";
-
+ 
 export default function login() {
-  let u = "john@gmail.com";
-  let p = "test";
+  
 
   return (
     <div>

@@ -1,6 +1,5 @@
 import { Component } from "react/cjs/react.production.min";
 import styles from "../styles/forms.module.css";
-import { register } from "../pages/api/auth";
 import React, { useState } from "react";
 import authHeader from "../_helpers/authentication";
 

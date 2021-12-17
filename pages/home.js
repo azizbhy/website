@@ -1,15 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Component } from "react";
+
 import { Signup } from "../components/Signup";
-import { SignupForm } from "../components/SignupForm";
 import styles from "../styles/Home.module.css";
-import { LoginForm } from "../components/LoginForm";
-import Router from "next/router";
 import { Logo } from "../components/Logo";
+import { _isAuthenticated } from "../_helpers/authentication";
+import router from "next/router";
 
 export default function Home() {
-  
+
+  if(_isAuthenticated()){
+    router.push("/home");
+  }
+
   return (
     <div className={styles.flexContainer}>
       <div className={styles.container}>

@@ -1,10 +1,7 @@
 import styles from "../styles/forms.module.css";
 import React, { useState } from "react";
-import { signin } from "../pages/api/auth";
-import { useRouter } from "next/router";
 import { _Authentication } from "../_helpers/authentication";
-import isEmpty from "validator/lib/isEmpty";
-
+ 
 
 export const LoginForm = () => {
 
@@ -29,12 +26,20 @@ export const LoginForm = () => {
             email,
             password
           }),
+          
         })
 
         const data = await response.json();
 
         console.log(data);
+
+        if(data) {
+          _Authentication(data.token,data.user);
+          console.log(data.token,data.user);
+        }
+
       }
+      
 
     return (
     <div className="provider">

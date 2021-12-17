@@ -1,12 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Component } from "react";
 import { Signup } from "../components/Signup";
 import SignupForm  from "../components/SignupForm";
 import styles from "../styles/Home.module.css";
-import LoginForm  from "../components/LoginForm";
-import Link from "next/link";
-import Router from "next/router";
 import React from "react";
 
 class register extends React.Component {
