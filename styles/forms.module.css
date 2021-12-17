@@ -1,0 +1,27 @@
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.mainForm input {
+    padding: 1rem 1.4rem;
+    border: 2px solid #707070;
+    border-radius: 0.4rem;
+}
+.mainForm input[type="submit"] {
+    align-self: center;
+    padding: 0.8rem 2.4rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.mainForm input:focus {
+    transform: scale(1.015);
+}
+.name {
+    display: flex;
+    gap: 1.4rem;
+}
+.name input {
+    flex: 1;
+}
