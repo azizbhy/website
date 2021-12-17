@@ -1,21 +1,17 @@
-import { Component } from "react/cjs/react.production.min";
 import styles from "../styles/forms.module.css";
 import React, { useState } from "react";
-import authHeader from "../_helpers/authentication";
+import { useRouter } from "next/router";
 
 
 
 const SignupForm = () => {
-
-
-  
-
   
   const [firstName, setFirstName] = useState(""); 
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const router = useRouter();
+
   async function registerUser(event){
 
     event.preventDefault();
@@ -39,6 +35,9 @@ const SignupForm = () => {
     })
 
     const data = await response.json();
+    if(data){
+      router.push("/login");
+    }
 
     console.log(data);
 

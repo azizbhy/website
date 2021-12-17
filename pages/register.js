@@ -2,10 +2,13 @@ import { Signup } from "../components/Signup";
 import SignupForm  from "../components/SignupForm";
 import styles from "../styles/Home.module.css";
 import React from "react";
+import { _isAuthenticated } from "../_helpers/authentication";
+import { useRouter } from "next/router";
 
-class register extends React.Component {
+export default function register(){
 
-  render() {
+  const router = useRouter();
+
     return (
       <div>
         <div className={styles.flexContainer}>
@@ -15,13 +18,13 @@ class register extends React.Component {
                 title={"Register"}
                 icon={"./register.svg"}
                 check="/checkmark.svg"
-                text={"Browse and find what you need"}
+                text={"Create An Account Here"}
                 link="register"
               />
               <Signup
                 title={"Sign In"}
                 icon={"./log-in.svg"}
-                text={"Browse and find what you need"}
+                text={"Connect To Your Account Here"}
                 link="login"
               />
             </div>
@@ -31,7 +34,6 @@ class register extends React.Component {
       </div>
     );
   }
-}
 
 
-export default register;
+

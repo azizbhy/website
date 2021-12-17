@@ -15,9 +15,8 @@ export const _Authentication = (token, user) => {
 export const _isAuthenticated = () => {
   if (getCookie("token") && getLocalStorage("user")) {
     return getLocalStorage("user");
-  } else {
+  } 
     return false;
-  }
 };
 
 export const logout = (next) => {
@@ -26,5 +25,4 @@ export const logout = (next) => {
 
   console.log("done")
 
-  next();
 };

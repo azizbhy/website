@@ -1,12 +1,12 @@
 import styles from "../styles/forms.module.css";
 import React, { useState } from "react";
 import { _Authentication } from "../_helpers/authentication";
- 
+import { useRouter } from "next/router";
+
 
 export const LoginForm = () => {
 
-    
-
+    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
@@ -35,6 +35,7 @@ export const LoginForm = () => {
 
         if(data) {
           _Authentication(data.token,data.user);
+          router.push("/home");
           console.log(data.token,data.user);
         }
 

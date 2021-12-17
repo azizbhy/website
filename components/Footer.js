@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import styles from "../styles/layout.module.css";
 import { Logo } from "./Logo";
+
+
 export const Footer = () => {
   return (
     <div>

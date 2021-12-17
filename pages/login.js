@@ -14,25 +14,18 @@ export default function login() {
             <Signup
               title={"Register"}
               icon={"./register.svg"}
-              text={"Browse and find what you need"}
+              text={"Create An Account Here"}
               link="register"
             />
             <Signup
               title={"Sign In"}
               icon={"./log-in.svg"}
               check="/checkmark.svg"
-              text={"Browse and find what you need"}
+              text={"Connect To Your Account Here"}
               link="login"
             />
           </div>
-          <LoginForm
-            click={() => {
-              signIn("credentials", {
-                username: u,
-                password: p,
-              });
-            }}
-          />
+          <LoginForm/>
         </div>
       </div>
     </div>
